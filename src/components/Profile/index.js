@@ -1,28 +1,53 @@
 import React from "react"
-import { StaticQuery, grafhql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
-const Profile = () => (
-    <StaticQuery
-        query={grafhql`
+const Profile = () => {
+    const {
+        site:{siteMetadata:{author,position,description}}
+    } = useStaticQuery(graphql`
             query MySiteMetadata {
                 site {
                 siteMetadata {
                     author
                     description
-                    title
+                    position
+                    }
+                }
+            }          
+        `)
+    return(
+        <div className="Profile-wrapper">
+            <h1>{author}</h1>
+            <h2>{position}</h2>
+            <p>{description}</p>
+        </div>
+    )    
+}
+
+/*
+const Profile = () => (
+    <StaticQuery
+        query={graphql`
+            query MySiteMetadata {
+                site {
+                siteMetadata {
+                    author
+                    description
+                    position
                     }
                 }
             }          
         `}
-        render={data => (
+        render={({
+                site:{siteMetadata:{author,position,description}}) => (
             <div className="Profile-wrapper">
-                <h1>{data.site.siteMetadata.author}</h1>
-                <h2>{data.site.siteMetadata.title}</h2>
-                <p>{data.site.siteMetadata.description}</p>
+                <h1>{author}</h1>
+                <h2>{position}</h2>
+                <p>{description}</p>
             </div>
         )}
     />
     
-)
+)*/
 
 export default Profile
