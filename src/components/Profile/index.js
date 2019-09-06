@@ -26,7 +26,7 @@ const Profile = () => {
     )    
 }
 
-/*
+/* Exemplo de outra forma de renderizar os dados da query.
 const Profile = () => (
     <StaticQuery
         query={graphql`
