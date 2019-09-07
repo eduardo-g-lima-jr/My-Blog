@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `My Blog`,
     position: 'Backend developer',
-    description: `Futuro desenvolvedor Web, estudando mobile e brincando de hacker. - @edu_gjr`,
-    author: `Eduardo Gonçalves de Lima Junior`,
+    description: 'Teste',
+    author: `Eduardo`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -26,7 +26,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: ``, // This path is relative to the root of the site.
+        icon: `src/images/perfil.jpg`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
