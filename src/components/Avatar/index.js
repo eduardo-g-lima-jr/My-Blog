@@ -17,7 +17,7 @@ const Avatar = () =>{
         `
     )
     return <S.AvatarWrapper
-            fixed={avatarImage.childImageSharp.fluid} 
+            fixed={avatarImage.childImageSharp.fixed} 
             />
 }
 
