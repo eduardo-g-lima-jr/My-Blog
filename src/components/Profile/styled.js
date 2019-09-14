@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import {Link} from "gatsby"
+import styled from 'styled-components'
+import { Link } from 'gatsby'
 
 export const ProfileWrapper = styled.section`
     color: #889906;

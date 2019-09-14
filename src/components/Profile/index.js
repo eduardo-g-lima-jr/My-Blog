@@ -1,12 +1,12 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import Avatar from '../Avatar'
 import * as S from './styled'
 
 const Profile = () => {
-    const {
-        site:{siteMetadata:{author,position,description}}
-    } = useStaticQuery(graphql`
+  const {
+    site: { siteMetadata: { author, position, description } }
+  } = useStaticQuery(graphql`
             query MySiteMetadata {
                 site {
                 siteMetadata {
@@ -17,16 +17,16 @@ const Profile = () => {
                 }
             }          
         `)
-    return(
-        <S.ProfileWrapper>
-            <S.ProfileLink>
-                <Avatar/>
-                <S.ProfileAuthor>{author}</S.ProfileAuthor>
-                <S.ProfilePosition>{position}</S.ProfilePosition>
-                <S.ProfileDescription>{description}</S.ProfileDescription>
-            </S.ProfileLink>
-        </S.ProfileWrapper>
-    )    
+  return (
+    <S.ProfileWrapper>
+      <S.ProfileLink>
+        <Avatar />
+        <S.ProfileAuthor>{author}</S.ProfileAuthor>
+        <S.ProfilePosition>{position}</S.ProfilePosition>
+        <S.ProfileDescription>{description}</S.ProfileDescription>
+      </S.ProfileLink>
+    </S.ProfileWrapper>
+  )
 }
 
 /* Exemplo de outra forma de renderizar os dados da query.
@@ -41,7 +41,7 @@ const Profile = () => (
                     position
                     }
                 }
-            }          
+            }
         `}
         render={({
                 site:{siteMetadata:{author,position,description}}) => (
@@ -52,7 +52,7 @@ const Profile = () => (
             </div>
         )}
     />
-    
-)*/
+
+) */
 
 export default Profile
