@@ -1,12 +1,12 @@
 import { Github } from 'styled-icons/boxicons-logos/Github'
 import { Twitter } from 'styled-icons/boxicons-logos/Twitter'
-import { Insta } from 'styled-icons/boxicons-logos/Instagram'
-import { Linkedin } from 'styled-icons/boxicons-logos/LinkedinSquare'
+import { Instagram } from 'styled-icons/boxicons-logos/Instagram'
+import { Linkedin } from 'styled-icons/fa-brands/Linkedin'
 
 const Icons = {
   Github,
   Twitter,
-  Insta,
+  Instagram,
   Linkedin,
 }
 
