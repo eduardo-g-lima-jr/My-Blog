@@ -7,7 +7,7 @@ const Icons = {
   Github,
   Twitter,
   Insta,
-  Linkedin
+  Linkedin,
 }
 
 export default Icons
