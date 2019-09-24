@@ -6,15 +6,15 @@ const BlogPost = ({ data }) => {
 
   return (
     <>
-      <h1>{post.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+      <h1>Title: {post.frontmatter.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </>
   )
 }
 
 export const query = graphql`
-  query Post($slug: String) {
-    markdownRemark(fields: {slug: {eq: $slug }}) {
+  query Post($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
       }
