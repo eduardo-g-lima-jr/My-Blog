@@ -8,7 +8,7 @@ import SEO from '../components/seo'
 const IndexPage = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
     query PostList {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
         edges {
           node {
             id
@@ -37,23 +37,14 @@ const IndexPage = () => {
       {postList.map(
         ({
           node: {
-            frontmatter: { background, category, date, description, title},
+            frontmatter: { background, category, date, description, title },
             timeToRead,
             fields: { slug }
           },
-        }) => (
-          <PostItem
-            slug={slug}
-            background={background}
-            category={category}
-            date={date}
-            timeToRead={timeToRead}
-            title={title}
-            description={description}
-          />
-        )
-      )}
-      
+        }) => {
+            return (<PostItem slug={slug} background={background} category={category} date={date} timeToRead={timeToRead} title={title} description={description} />);
+          }
+      )}      
     </Layout>
   )
 }
