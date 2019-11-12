@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 import SEO from '../components/seo'
 
 const BlogList = props => {
-  const postList = props.data.allmarkdownRemark.edges
+  const postList = props.data.allMarkdownRemark.edges
 
   return (
     <Layout>
@@ -35,7 +35,7 @@ const BlogList = props => {
 }
 
 export const query = graphql`
-  query PostList ($skip: Int!, $limit: Int!) {
+  query postList ($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
       limit: $limit
